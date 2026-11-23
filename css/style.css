@@ -1,0 +1,256 @@
+/* Remise à zéro : on enlève les marges par défaut */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* la taille inclut le padding */
+}
+
+body {
+    font-family: "Anton", sans-serif;
+}
+
+/* ===== EN-TÊTE ===== */
+header {
+    background-color: #23991D;   /* le vert de la maquette */
+    display: flex;               /* logo et menu côte à côte */
+    align-items: center;         /* centrés verticalement */
+    justify-content: space-between;
+    flex-wrap: wrap;             /* sur petit écran, ça passe à la ligne */
+    gap: 1rem;
+    padding: 0.5rem 1rem;
+}
+
+/* Logo : forme ovale blanche */
+.logo {
+    background: #D9D9D9;
+    border-radius: 50px;         /* arrondi = ovale */
+    padding: 0.5rem 1.5rem;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Menu */
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.5rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;       /* enlève le soulignement */
+    text-transform: uppercase;   /* MAJUSCULES */
+    font-size: 1.2rem;
+    padding: 0.4rem 0.8rem;
+}
+
+/* Lien actif : fond vert foncé */
+nav a.actif,
+nav a:hover {
+    background-color: #116722;
+}
+
+/* ===== BANNIÈRE (HERO) ===== */
+.hero {
+    position: relative;          /* sert de repère pour le texte */
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Texte posé en bas de l'image */
+.hero-texte {
+   position: absolute;
+    bottom: 5%;
+    left: 3%;
+    max-width: 55%;
+    padding: 1.5rem;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+.hero-texte h1 {
+    font-family: "Alfa Slab One", serif;
+    text-transform: uppercase;
+    /* clamp = taille souple : min, idéale, max */
+    font-size: clamp(1.8rem, 5vw, 4rem);
+}
+
+.hero-texte p {
+    font-family: "Alfa Slab One", serif;
+    text-transform: uppercase;
+    font-size: clamp(0.8rem, 1.5vw, 1.2rem);
+}
+
+.bouton {
+    position: absolute;
+    bottom: 8%;
+    right: 6%;
+    background: rgba(0, 0, 0, 0.75);
+    color: white;
+    text-decoration: none;
+    font-family: "Alfa Slab One", serif;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    padding: 0.8rem 1.5rem;
+    border-radius: 12px
+}
+
+/* ===== PETITS ÉCRANS ===== */
+@media (max-width: 700px) {
+    .hero-texte {
+        max-width: 94%;
+        bottom: 3.5rem;
+    }
+    .bouton {
+        bottom: 0.5rem;
+        padding: 0.5rem 1rem;
+    }
+}
+
+/* Taille de l'icône : souple, elle suit la taille du texte */
+.logo-icone {
+    height: 1.8em;          /* 1.8 fois la taille du texte */
+    width: auto;            /* la largeur s'ajuste sans déformer */
+    border-radius: 4px;     /* petits coins arrondis */
+}
+
+/* ===== PAGES (ALGUES, etc.) ===== */
+.page {
+    display: grid;
+    grid-template-columns: 1fr 2fr;   /* image 1 part, textes 2 parts */
+    gap: 2rem;
+    padding: 2rem;
+    scroll-margin-top: 90px;          /* évite d'être caché par le menu */
+}
+
+.page img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.textes {
+    display: flex;
+    flex-direction: column;
+}
+
+.bloc {
+    background: #2b3350;
+    color: white;
+    padding: 1rem 1.5rem;
+    width: 75%;
+}
+
+.bloc summary {
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-bottom: 0.8rem;
+}
+
+.bloc summary:hover {
+    color: #7fd957;
+}
+
+.bloc p {
+    font-size: 1.2rem;
+    padding-left: 2rem;
+}
+
+.bloc-haut {
+    margin-left: 5%;
+}
+
+.bloc-bas {
+    margin-left: auto;
+    margin-top: 8rem;
+}
+
+/* ===== TABLEAU SYNOPTIQUE ===== */
+.synthese {
+    padding: 2rem;
+    scroll-margin-top: 90px;
+}
+
+.synthese h2 {
+    font-family: "Alfa Slab One", serif;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #2b3350;
+    padding: 0.8rem;
+    text-align: left;
+}
+
+th {
+    background: #2b3350;
+    color: white;
+}
+
+tr:hover td {
+    background: #e3f5dc;
+}
+
+/* ===== PETITS ÉCRANS ===== */
+@media (max-width: 700px) {
+    .hero-texte {
+        max-width: 94%;
+        bottom: 3.5rem;
+    }
+    .bouton {
+        bottom: 0.5rem;
+        padding: 0.5rem 1rem;
+    }
+    .page {
+        grid-template-columns: 1fr;
+    }
+    .bloc {
+        width: 100%;
+        margin-left: 0;
+    }
+    .bloc-bas {
+        margin-top: 1rem;
+    }
+}
+
+.page figure {
+    background: #333;
+}
+
+figcaption {
+    background: #333;
+    color: white;
+    font-style: italic;
+    font-size: 1rem;
+    text-align: center;
+    padding: 0.6rem;
+}
+
+.page figure {
+    position: relative;
+}
+
+figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    font-style: italic;
+    text-align: center;
+    padding: 0.6rem;
+}

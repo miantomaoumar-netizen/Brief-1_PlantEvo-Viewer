@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlantEvo Viewer</title>
+
+    <!-- Polices Google : Anton (menu) et Alfa Slab One (titres) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Anton&display=swap" rel="stylesheet">
+
+    <!-- On relie le fichier de style -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- l'en-tête du site -->
+    <header>
+        <!-- Le logo : icône + nom du site -->
+        <div class="logo">
+            <img src="images/logo.png" alt="Icône de plante PlantEvo" class="logo-icone">
+            PlantEvo Viewer
+        </div>
+
+        <!-- la zone des liens de navigation -->
+        <nav>
+            <a href="#accueil" class="actif">Accueil</a>
+            <a href="#algues">Algues</a>
+            <a href="#mousses">Mousses</a>
+            <a href="#fougeres">Fougères</a>
+            <a href="#coniferes">Conifères</a>
+            <a href="#graminees">Graminées</a>
+            <a href="#dicotyledones">Dicotylédones</a>
+        </nav>
+    </header>
+
+    <!-- le contenu principal (UN SEUL) -->
+    <main>
+        <!-- <section> : la bannière d'accueil -->
+        <section class="hero" id="accueil">
+            <!-- <img> : l'image de fond -->
+            <img src="images/plantes.jpg" alt="Des plantes vertes devant une fenêtre">
+
+            <!-- Le bloc de texte posé par-dessus l'image -->
+            <div class="hero-texte">
+                <h1>“Des algues aux fleurs”</h1>
+                <p>Découvre comment les plantes ont conquis la Terre</p>
+            </div>
+
+             <a href="#algues" class="bouton">Explorer →</a>
+        </section>
+
+
+        <!-- ===== ALGUES ===== -->
+        <section class="page" id="algues">
+          <figure>
+            <img src="images/algue.jpg" alt="Falaise rocheuse couverte de plantes vertes et de mousses, avec une chute d'eau à gauche">
+            <figcaption>Des algues vertes</figcaption>
+          </figure>
+         
+
+            <div class="textes">
+                <div class="bloc bloc-haut">
+                    <details open>
+                        <summary>Appareil végétatif : les algues, c'est quoi ?</summary>
+                        <p>Ce sont des organismes photosynthétiques au corps en thalle (sans racines, tiges ni feuilles vraies), vivant en milieu aquatique.</p>
+                    </details>
+                </div>
+
+                <div class="bloc bloc-bas">
+                    <details open>
+                        <summary>Reproduction : le problème des algues</summary>
+                        <p>Aucun problème de dessiccation, mais la reproduction dépend de l'eau (gamète mâle nageur).</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ===== MOUSSES ===== -->
+  <section class="page" id="mousses">
+  <figure>
+    <img src="images/mousse.jpg" alt="Des mousses vertes et des lichens sur une roche">
+    <figcaption> Des mousses vertes</figcaption>
+  </figure>
+
+    <div class="textes">
+        <div class="bloc bloc-m1">
+            <details open>
+                <summary>Appareil végétatif : les mousses</summary>
+                <p>Ce sont des plantes terrestres non vasculaires, sans vaisseaux, fixées par des rhizoïdes (et non de vraies racines).</p>
+            </details>
+        </div>
+
+        <div class="bloc bloc-m2">
+            <details open>
+                <summary>Leur problème</summary>
+                <p>C'est de se dessécher hors de l'eau.</p>
+            </details>
+        </div>
+
+        <div class="bloc bloc-m3">
+            <details open>
+                <summary>Innovations face à ce problème</summary>
+                <ul>
+                    <li><strong>Cuticule cireuse :</strong> une fine couche de cire sur la plante, comme un imperméable.</li>
+                    <li><strong>Stomates :</strong> de minuscules petites portes. Elles s'ouvrent pour laisser entrer l'air dont la plante a besoin pour respirer.</li>
+                    <li><strong>Spores :</strong> de toutes petites poussières qui partent au vent et deviennent de nouvelles mousses.</li>
+                </ul>
+            </details>
+        </div>
+    </div>
+</section>
+
+<!-- ===== FOUGÈRES ===== -->
+<section class="page" id="fougeres">
+    <figure>
+        <img src="images/fougère.jpg" alt="Des fougères vertes près d'une pierre">
+        <figcaption>Fougères</figcaption>
+    </figure>
+
+    <div class="textes">
+        <div class="bloc bloc-m1">
+            <details open>
+                <summary>Appareil végétatif : les fougères</summary>
+                <p>Ce sont les premières plantes vasculaires, avec vraies racines, tiges et feuilles.</p>
+            </details>
+        </div>
+
+        <div class="bloc bloc-m2">
+            <details open>
+                <summary>Leur problème</summary>
+                <p>Tenir debout et transporter l'eau.</p>
+            </details>
+        </div>
+
+        <div class="bloc bloc-m3">
+            <details open>
+                <summary>Pour solutionner leur problème, on a :</summary>
+                <ul>
+                    <li><strong>Vaisseaux (xylème et phloème) :</strong> de petits tuyaux dans la plante. Le xylème fait monter l'eau du sol jusqu'aux feuilles. Le phloème distribue la nourriture partout, comme des camions de livraison.</li>
+                    <li><strong>Lignine :</strong> une matière dure qui renforce les tuyaux, comme un squelette. Elle permet à la plante de tenir debout et de grandir haut.</li>
+                </ul>
+            </details>
+        </div>
+    </div>
+</section>
+
+<!-- ===== CONIFÈRES ===== -->
+<section class="page" id="coniferes">
+    <figure>
+        <img src="images/conifère.jpg" alt="Des conifères de différentes teintes de vert dans un parc">
+        <figcaption>Conifères</figcaption>
+    </figure>
+
+    <div class="textes">
+        <div class="bloc bloc-m1">
+            <details open>
+                <summary>Les conifères</summary>
+                <p>Ce sont des plantes vasculaires à graines nues, non enfermées dans un fruit.</p>
+            </details>
+        </div>
+
+        <div class="bloc bloc-m2">
+            <details open>
+                <summary>Leur problème</summary>
+                <p>Chercher à se reproduire sans eau.</p>
+            </details>
+        </div>
+
+        <div class="bloc bloc-m3">
+            <details open>
+                <summary>Comme innovation, on a :</summary>
+                <ul>
+                    <li><strong>Pollen :</strong> une poussière jaune qui porte la cellule mâle. Le vent la transporte dans l'air, donc plus besoin de nager.</li>
+                    <li><strong>Ovule protégé :</strong> la cellule femelle est cachée et protégée à l'intérieur d'une écaille.</li>
+                    <li><strong>Graine nue :</strong> la graine est posée sur l'écaille sans être enfermée dans un fruit. Dans une pomme de pin, on voit les graines entre les écailles.</li>
+                </ul>
+            </details>
+        </div>
+    </div>
+</section>
+
+<!-- ===== GRAMINÉES ===== -->
+<section class="page" id="graminees">
+    <figure>
+        <img src="images/Graminée.jpg" alt="Des graminées aux épis duveteux, entourées de petites plantes colorées">
+        <figcaption>Graminées</figcaption>
+    </figure>
+
+    <div class="textes">
+        <div class="bloc bloc-m1">
+            <details open>
+                <summary>Les graminées</summary>
+                <p>Ce sont des plantes à fleurs à un seul cotylédon (riz, maïs).</p>
+            </details>
+        </div>
+
+        <div class="bloc bloc-m2">
+            <details open>
+                <summary>Leur problème</summary>
+                <p>La graine doit être protégée et dispersée loin de la plante mère.</p>
+            </details>
+        </div>
+
+        <div class="bloc bloc-m3">
+            <details open>
+                <summary>Comme solution, on a :</summary>
+                <p>La fleur fabrique la graine et le fruit la protège et l'aide à voyager (chez le riz et le maïs, le grain est le fruit). Le pollen voyage grâce au vent : c'est la pollinisation par le vent.</p>
+            </details>
+        </div>
+    </div>
+</section>
+
+<!-- ===== DICOTYLÉDONES ===== -->
+<section class="page" id="dicotyledones">
+    <figure>
+        <img src="images/Dicotylédone.jpg" alt="Une jeune plante à grandes feuilles qui pousse sur un sol de feuilles mortes">
+        <figcaption>Dicotylédones</figcaption>
+    </figure>
+
+    <div class="textes">
+        <div class="bloc bloc-m1">
+            <details open>
+                <summary>Les dicotylédones</summary>
+                <p>Ce sont aussi des plantes à fleurs, mais au lieu du vent, elles ont des amis : les insectes. Elles ont de belles fleurs qui attirent les insectes.</p>
+            </details>
+        </div>
+
+        <div class="bloc bloc-m2">
+            <details open>
+                <summary>Leur problème</summary>
+                <p>Protéger la graine, la disperser, et mieux transporter le pollen, car le vent en gaspille beaucoup.</p>
+            </details>
+        </div>
+
+        <div class="bloc bloc-m3">
+            <details open>
+                <summary>Comme solution :</summary>
+                <p>La fleur attire les insectes avec ses couleurs et son nectar. L'insecte transporte le pollen directement d'une fleur à l'autre : c'est la pollinisation par les insectes.</p>
+            </details>
+        </div>
+    </div>
+</section>
+
+<!-- Les sections Mousses, Fougères, Conifères, Graminées et Dicotylédones viendront ici -->
+
+        <!-- ===== TABLEAU SYNOPTIQUE ===== -->
+        <section class="synthese" id="synthese">
+            <h2>Tableau synoptique</h2>
+            <table>
+                <tr>
+                    <th>Groupe</th>
+                    <th>Appareil végétatif</th>
+                    <th>Reproduction</th>
+                </tr>
+                <tr>
+                    <td>Algues</td>
+                    <td>Thalle (sans racines, tiges ni feuilles vraies)</td>
+                    <td>Dépend de l'eau (gamète mâle nageur)</td>
+                </tr>
+                <tr>
+                    <td>Mousses</td>
+                    <td>Plante terrestre non vasculaire, fixée par des rhizoïdes. Cuticule cireuse et stomates contre le dessèchement</td>
+                    <td>Spores dispersées par le vent</td>
+                </tr>
+                <tr>
+                    <td>Fougères</td>
+                    <td>Premières plantes vasculaires : vraies racines, tiges et feuilles. Vaisseaux (xylème et phloème) et lignine pour transporter l'eau et tenir debout</td>
+                    <td>Spores produites sous les feuilles</td>
+                </tr>
+                <tr>
+                    <td>Conifères</td>
+                    <td>Plantes vasculaires à graines nues, non enfermées dans un fruit</td>
+                    <td>Pollen transporté par le vent, ovule protégé dans une écaille, graine nue (pas besoin d'eau)</td>
+                </tr>
+                <tr>
+                    <td>Graminées</td>
+                    <td>Plantes à fleurs à un seul cotylédon</td>
+                    <td>Fleur qui fabrique la graine, fruit qui la protège et l'aide à voyager. Pollinisation par le vent</td>
+                </tr>
+                <tr>
+                    <td>Dicotylédones</td>
+                    <td>Plantes à fleurs, aux belles fleurs qui attirent les insectes</td>
+                    <td>Pollinisation par les insectes (le pollen va directement d'une fleur à l'autre)</td>
+                </tr>
+            </table>
+        </section>
+    </main>
+</body>
+</html>
